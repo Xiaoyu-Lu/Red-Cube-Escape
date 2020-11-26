@@ -39,7 +39,7 @@ On the ocean, a yellow cylinder flows up and down. When your mouse hovers over i
 
 <img src="imgs/under-the-sea.png" alt="under-the-sea" style="zoom:32%;" />
 
-### 3.2  Riddle Line2: Worship the Moonlight
+#### 3.2  Riddle Line2: Worship the Moonlight
 
 Let's find the mystery "under the ocean"! 
 
@@ -57,7 +57,7 @@ There's no harm to click it, it won't explode. And a Portal with a text "Space" 
 
 Let's go through the portal "Space"!
 
-### 3.3  Riddle Line3: Fight in the Space
+#### 3.3  Riddle Line3: Fight in the Space
 
 Something is emitting out of the giant celestial object. An alien is approaching. What should you do? Stand still?
 

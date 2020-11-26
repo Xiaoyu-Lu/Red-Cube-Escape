@@ -131,7 +131,7 @@
           id="light"
           geometry="primitive: sphere; radius: 5"
           material="color: #940000; shader: flat"
-          light="color: #940000; distance: 100; intensity: 2; type: point"
+          light="color: #940000; distance: 100; intensity: 2; type: point; decay: 3"
         ></a-mixin>
 
       </a-assets>
@@ -231,7 +231,7 @@
         ></a-text
       ></a-entity>
 
-      <!-- 大cube 鼠标旋转 link to 360 cube panorama --> 
+      <!-- 大cube 鼠标旋转 link to 360 cube panorama -->
       <a-entity
         id="bigCube"
         class="link"
@@ -305,10 +305,10 @@
         visible="false"
         image="#space"
       ></a-link>
-      
+
       <!-- 灯光 旋转球1 -->
       <a-entity
-        id="light1" 
+        id="light1"
         animation="property: rotation; to: 0 0 360; dur: 5000; easing: linear; loop: true"
       >
         <a-entity mixin="light" position="30 0 0"></a-entity>
@@ -316,7 +316,7 @@
 
       <!-- 灯光 旋转球2 -->
       <a-entity
-        id="light2" 
+        id="light2"
         animation="property: rotation; to: 360 0 0; dur: 4000; easing: linear; loop: true"
       >
         <a-entity mixin="light" position="0 0 30"></a-entity>

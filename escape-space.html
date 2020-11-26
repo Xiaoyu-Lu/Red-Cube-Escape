@@ -28,11 +28,13 @@
       camera-position
     >
       <a-assets>
+        <!-- alien小人儿 -->
         <a-asset-item
           id="figure"
           src="assets/alien.gltf"
         ></a-asset-item>
 
+        <!-- 背景图 -->
         <img
           id="space"
           crossorigin="anonymous"
@@ -40,11 +42,10 @@
         />
       </a-assets>
 
-      <!-- 初始背景 360-degree panorama -->
-
+      <!-- 初始背景 360-degree space panorama -->
       <a-sky id="image-360" radius="200" src="#space" rotation="0 0 0"></a-sky>
 
-      <!-- 喷射物 红-->
+      <!-- 喷射物 红色-->
       <a-entity
         id="shooting1"
         position="-50 2.25 -50"
@@ -70,7 +71,8 @@
         scale="5 5 5"
         visible="false"
       ></a-text>
-      <!-- import gltf figure -->
+
+      <!-- import gltf figure created by blender -->
       <a-entity
         button
         class="clickable"
@@ -88,6 +90,7 @@
       ></a-entity>
      
       <!-- 不怎么亮的灯光 -->
+      <a-entity light="type: ambient; color: #CCC"></a-entity>
       <a-light color="red" position="0 20 0" intensity="2"></a-light>
 
       <!-- Camera & Cursor -->

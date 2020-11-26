@@ -33,11 +33,13 @@ Randomly click a floating cube, a hidden riddle might show up. There are three l
 
 #### 3.1 Riddle Line1: Under the Ocean
 
-On the ocean, a yellow cylinder flows up and down. When your mouse hovers over it, a prompt said: "See through Sea". Click it. You could see everything "under the ocean". The first line solved! Let's check the second line. It told you to "worship MOONLIGHT". Considering that the moonlight only exists at night, you probably need the night scene and a moon.  
+On the ocean, a yellow cylinder flows up and down. When your mouse hovers over it, a prompt said: "See through Sea". Click it. You could see everything "under the ocean". The first line solved!
 
 <img src="imgs/prompt-yellowbutton.png" alt="prompt-yellowbutton" style="zoom:35%;" />
 
 <img src="imgs/under-the-sea.png" alt="under-the-sea" style="zoom:32%;" />
+
+ Let's check the second line. It told you to "worship MOONLIGHT". Considering that the moonlight only exists at night, you probably need the night scene and a moon.  
 
 #### 3.2  Riddle Line2: Worship the Moonlight
 

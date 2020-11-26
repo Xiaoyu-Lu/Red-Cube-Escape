@@ -21,7 +21,7 @@ If the object is clickable, the color of the cursor will change from black to ye
 
 <img src="imgs/cursor-color-channge.gif" alt="cursor-color-channge" style="zoom:50%;" />
 
-When the mouse(a hand icon in PC) hovering some clickable/unclickable objects, they might disappear or change colors/scale.
+When the mouse(a hand icon in PC) hovering over some clickable/unclickable objects, they might disappear or change colors/scale.
 
 <img src="imgs/floatig-cube-disappear.gif" alt="floatig-cube-disappear" style="zoom:50%;" />
 

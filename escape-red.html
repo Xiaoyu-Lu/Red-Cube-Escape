@@ -11,7 +11,7 @@
     <script src="libs/aframe-text-geometry-component.min.js"></script>
     <script src="libs/link-controls.js"></script>
 
-    <!-- 点击物体换背景用-->
+    <!-- Image link template to be reused. -->
     <script id="link" type="text/html">
       <a-entity class="link"
         geometry="primitive: plane; height: 0.8; width: 0.8"
@@ -23,7 +23,6 @@
         ></a-entity>
     </script>
 
-    <!-- 点击yellowCylinder改Ocean的visibility用 -->
     <script>
       AFRAME.registerComponent("button", {
         init: function() {
@@ -35,7 +34,6 @@
       });
     </script>
 
-    <!-- 点击blueCube改Moon的visibility用 -->
     <script>
       AFRAME.registerComponent("button-moon", {
         init: function() {
@@ -47,7 +45,6 @@
       });
     </script>
 
-    <!-- 点击Moob改Portal的visibility用 -->
     <script>
       AFRAME.registerComponent("moon", {
         init: function() {
@@ -59,13 +56,12 @@
       });
     </script>
 
-    <!-- 创建一堆盒子用 -->
     <script id="boxTemplate" type="text/x-nunjucks-template">
       {% for x in range(0, 4) %}
-        {% for y in range(-5, 11, 4) %}
-          {% for z in range(0, 3) %}
-            <a-box
-              class="clickable"
+      {% for y in range(-5, 11,4) %}
+        {% for z in range(0, 3) %}
+          <a-box
+          class="clickable"
               color="red"
               scale="1.5 1.5 1.5"
               position="{{ x * 10 - 10 }} {{y}} {{ z * 10 - 7}}"
@@ -74,23 +70,25 @@
               animation__clickleave="property: visible; from: false; to: true; startEvents: click; dur: 3000"
               animation__mouseenter="property: scale; startEvents: mouseenter; to: 1.8 1.8 1.8; dur: 300"
               animation__mouseleave="property: scale; startEvents: mouseleave; to: 1.5 1.5 1.5; dur: 300"
-              ></a-box>
-          {% endfor %}
+              >
+          </a-box>
+        {% endfor %}
         {% endfor %}
       {% endfor %}
     </script>
 
-    <!-- 创建一堆盒子里的提示版用 -->
     <script id="planeTemplate" type="text/x-nunjucks-template">
       {% for x in range(0, 4) %}
         {% for y in range(-5, 11,4) %}
           {% for z in range(0, 3) %}
-          <a-entity
-            geometry="primitive: plane; width: 1.5; height: auto"
-            position="{{ x * 10 - 10 }} {{y}} {{ z * 10 - 7}}"
-            material="color: red"
-            text="width: 3.5; value:under the OCEAN\nworship MOONLIGHT\nfight in SPACE; align:center"
-            ></a-entity>
+
+        <a-entity
+
+          geometry="primitive: plane; width: 1.5; height: auto"
+          position="{{ x * 10 - 10 }} {{y}} {{ z * 10 - 7}}"
+          material="color: red"
+          text="width: 3.5; value:under the OCEAN\nworship MOONLIGHT\nfight in SPACE; align:center"></a-entity>
+
           {% endfor %}
         {% endfor %}
       {% endfor %}
@@ -104,39 +102,33 @@
       camera-position
     >
       <a-assets>
-
-        <!-- 月球的材料 -->
-        <img id="moonTexture" crossorigin="anonymous" src="assets/stone.jpg" />
-
-         <!-- 背景图 -->
+        <img id="boxTexture" crossorigin="i.imgur.com" src="assets/stone.jpg" />
         <img
           id="cubes"
           crossorigin="anonymous"
           src="assets/cubes-red.jpg"
         />
         <img
-          id="night"
-          crossorigin="anonymous"
-          src="assets/night-red.jpg"
-        />
-        <!-- 下一关的背景图 给portal用 -->
-        <img
           id="space"
           crossorigin="anonymous"
           src="assets/space.jpg"
         />
+        <img
+          id="night"
+          crossorigin="anonymous"
+          src="assets/night-red.jpg"
+        />
 
-        <!-- 旋转的灯用 -->
         <a-mixin
           id="light"
-          geometry="primitive: sphere; radius: 5"
-          material="color: red; shader: flat"
-          light="color: #FFDDD; distance: 200; intensity: 2; type: point"
+          geometry="primitive: sphere; radius: 1.5"
+          material="color: #FFDDD; shader: flat"
+          light="color: #FFDDD; distance: 150; intensity: 2; type: point"
         ></a-mixin>
-        
+
       </a-assets>
 
-      <!-- 初始背景 360-degree panorama -->
+      <!-- 初始背景 360-degree image -->
       <a-sky
         id="image-360"
         radius="200"
@@ -146,15 +138,14 @@
         animation__fadeback="property: components.material.material.color; type: color; from: red; to: #FFF; dur: 1000; startEvents: animationcomplete__fade"
       ></a-sky>
 
-      <!-- 立体背景 Boxes -->
+      <!--  Boxes -->
       <a-entity template="src: #boxTemplate"></a-entity>
 
-      <!-- text in Boxes -->
+      <!--  text in Boxes -->
       <a-entity template="src: #planeTemplate"></a-entity>
 
-      <!-- 干扰箱四个 鼠标变没 -->
+      <!--   干扰箱 四个  鼠标变换 变没 -->
       <a-entity
-        id="extra-box1"
         geometry="primitive: box"
         material="color: red"
         scale="1.5 1.5 1.5"
@@ -166,7 +157,6 @@
       ></a-entity>
 
       <a-entity
-        id="extra-box2"
         geometry="primitive: box"
         material="color: red"
         scale="1.5 1.5 1.5"
@@ -178,7 +168,6 @@
       ></a-entity>
 
       <a-entity
-        id="extra-box3"
         geometry="primitive: box"
         material="color: red"
         scale="1.5 1.5 1.5"
@@ -190,7 +179,6 @@
       ></a-entity>
 
       <a-entity
-        id="extra-box4"
         geometry="primitive: box"
         material="color: red"
         scale="1.5 1.5 1.5"
@@ -201,7 +189,8 @@
         animation__mouseleave="property: visible; from: false; to: true; startEvents: mouseleave; dur: 500"
       ></a-entity>
 
-      <!-- 夜晚箱带提示 鼠标变色 link to 360 night panorama -->
+      <!--  夜晚箱 鼠标变换 变色-->
+
       <a-entity
         button-moon
         id="blueCube"
@@ -231,7 +220,8 @@
         ></a-text
       ></a-entity>
 
-      <!-- 大cube 鼠标旋转 link to 360 cube panorama --> 
+      <!-- 大cube 回cube主题link 旋转-->
+
       <a-entity
         id="bigCube"
         class="link"
@@ -248,11 +238,11 @@
         proxy-event="event: click; to: #image-360; as: fade"
       ></a-entity>
 
-      <!-- 黄柱体带提示 鼠标控制海的有无-->
+      <!-- 黄柱体 按钮visible function-->
+
       <a-cylinder
         button
         class="clickable"
-        id="yellowCylinder"
         position="5 -0.25 7"
         radius="0.5"
         height="0.5"
@@ -273,7 +263,7 @@
         ></a-text
       ></a-cylinder>
 
-      <!-- 海洋 visible="true" 被yellowCylinder控制 //TO-DO:make it impenetrable-->
+      <!--    海洋 visible="true"-->
       <a-entity
         id="ocean"
         ocean="density: 50; width: 80; depth: 80; speed: 3"
@@ -282,12 +272,13 @@
         static-body
       ></a-entity>
 
-      <!-- 月球 visible="false" 被blueCube控制-->
+      <!--  月球-->
+
       <a-entity
         moon
         id="bigMoon"
         geometry="primitive: sphere"
-        material="src:#moonTexture; shader: flat"
+        material="src:#boxTexture; shader: flat"
         position="-10 5 25"
         animation="property: rotation; easing: easeInOutQuad; dir: alternate; to: 360 405 45;dur: 5000;  loop: true"
         event-set__mouseenter="scale: 2.2 2.2 2.2"
@@ -295,7 +286,7 @@
         visible="false"
       ></a-entity>
 
-      <!-- PORTAL //TO-DO:prevent triggering when hidden-->
+      <!-- PORTAL-->
       <a-link
         id="portal"
         href="escape-space.html"
@@ -306,16 +297,14 @@
         image="#space"
       ></a-link>
       
-      <!-- 灯光 -->
+      <!--   灯光-->
       <a-entity
-        id="light1" 
         animation="property: rotation; to: 0 0 360; dur: 5000; easing: linear; loop: true"
       >
-        <a-entity mixin="light" position="40 0 0"></a-entity>
+        <a-entity mixin="light" position="30 0 0"></a-entity>
       </a-entity>
 
       <a-entity
-        id="light2" 
         animation="property: rotation; to: 360 0 0; dur: 4000; easing: linear; loop: true"
       >
         <a-entity mixin="light" position="0 0 40"></a-entity>

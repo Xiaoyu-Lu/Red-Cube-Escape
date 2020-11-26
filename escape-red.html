@@ -126,14 +126,14 @@
           src="assets/space.jpg"
         />
 
-        <!-- 旋转的灯用 -->
+        <!-- 旋转球作为照明灯用 -->
         <a-mixin
           id="light"
           geometry="primitive: sphere; radius: 5"
-          material="color: red; shader: flat"
-          light="color: #FFDDD; distance: 200; intensity: 2; type: point"
+          material="color: #940000; shader: flat"
+          light="color: #940000; distance: 100; intensity: 2; type: point"
         ></a-mixin>
-        
+
       </a-assets>
 
       <!-- 初始背景 360-degree panorama -->
@@ -306,21 +306,26 @@
         image="#space"
       ></a-link>
       
-      <!-- 灯光 -->
+      <!-- 灯光 旋转球1 -->
       <a-entity
         id="light1" 
         animation="property: rotation; to: 0 0 360; dur: 5000; easing: linear; loop: true"
       >
-        <a-entity mixin="light" position="40 0 0"></a-entity>
+        <a-entity mixin="light" position="30 0 0"></a-entity>
       </a-entity>
 
+      <!-- 灯光 旋转球2 -->
       <a-entity
         id="light2" 
         animation="property: rotation; to: 360 0 0; dur: 4000; easing: linear; loop: true"
       >
-        <a-entity mixin="light" position="0 0 40"></a-entity>
+        <a-entity mixin="light" position="0 0 30"></a-entity>
       </a-entity>
 
+      <!-- 灯光 氛围灯 -->
+      <a-entity light="type: ambient; color: #610000"></a-entity>
+
+      <!-- Text -->
       <a-text
         value="YOU ARE IN THE CUBE"
         color="red"

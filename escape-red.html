@@ -119,13 +119,22 @@
           src="assets/night-red.jpg"
         />
 
+<<<<<<< HEAD
         <a-mixin
           id="light"
           geometry="primitive: sphere; radius: 1.5"
           material="color: #FFDDD; shader: flat"
           light="color: #FFDDD; distance: 150; intensity: 2; type: point"
+=======
+        <!-- 旋转的灯用 -->
+        <a-mixin
+          id="light"
+          geometry="primitive: sphere; radius: 5"
+          material="color: red; shader: flat"
+          light="color: #FFDDD; distance: 200; intensity: 2; type: point"
+>>>>>>> parent of 766e68d... Update escape-red.html
         ></a-mixin>
-
+        
       </a-assets>
 
       <!-- 初始背景 360-degree image -->
@@ -297,11 +306,15 @@
         image="#space"
       ></a-link>
       
+<<<<<<< HEAD
       <!--   灯光-->
+=======
+      <!-- 灯光 -->
+>>>>>>> parent of 766e68d... Update escape-red.html
       <a-entity
         animation="property: rotation; to: 0 0 360; dur: 5000; easing: linear; loop: true"
       >
-        <a-entity mixin="light" position="30 0 0"></a-entity>
+        <a-entity mixin="light" position="40 0 0"></a-entity>
       </a-entity>
 
       <a-entity

@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <script src="libs/aframe.min.js"></script>
+    <script src="libs/aframe-extras.min.js"></script>
+    <script src="libs/aframe-physics-system.min.js"></script>
+    <script src="libs/aframe-animation-component.min.js"></script>
+    <script src="libs/aframe-particle-system-component.min.js"></script>
+    <script src="libs/link-controls.js"></script>
+
+    <script>
+      AFRAME.registerComponent("button", {
+        init: function() {
+          this.el.addEventListener("click", e => {
+            let obj = document.querySelector("#portal");
+            let obj2 = document.querySelector("a-text");
+            obj.setAttribute("visible", "true");
+            obj2.setAttribute("visible", !obj2.getAttribute("visible"));
+          });
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <a-scene
+      physics="friction:0.2; restitution: 0.01; gravity:0"
+      cursor="rayOrigin: mouse"
+      camera-position
+    >
+      <a-assets>
+        <a-asset-item
+          id="figure"
+          src="assets/alien.gltf"
+        ></a-asset-item>
+
+        <img
+          id="space"
+          crossorigin="anonymous"
+          src="assets/space.jpg"
+        />
+      </a-assets>
+
+      <!-- 初始背景 360-degree image -->
+
+      <a-sky id="image-360" radius="200" src="#space" rotation="0 0 0"></a-sky>
+
+      <!-- 喷射物 红-->
+      <a-entity
+        id="shooting1"
+        position="-50 2.25 -50"
+        particle-system="color: #EF0000,#44CC00"
+      ></a-entity>
+
+      <!-- PORTAL下个人的作业超链接-->
+      <a-link
+        id="portal"
+        href="escape-red.html"
+        title="NEXT ROOM"
+        position=" 0 -20 5"
+        rotation="-90 0 0"
+        visible="false"
+        image="#space"
+      ></a-link>
+
+      <!--       text: “Some of us are looking at the stars, but all of us are living in the gutter.” -->
+      <a-text
+        value="Some of us are looking at the stars,\nbut all of us are living in the gutter."
+        color="#BBB"
+        position="-0.9 0.2 -3"
+        scale="5 5 5"
+        visible="false"
+      ></a-text>
+      <!--       import gltf figure -->
+      <a-entity
+        button
+        class="clickable"
+        gltf-model="#figure"
+        animation-mixer="clip: walking.001"
+        position="-3 10 -15"
+        rotation="0 20 0"
+        light="type: point; intensity: 5"
+        animation="property: position; 
+                           easing: easeInOutQuad; 
+                           dir: alternate; 
+                       
+                           dur: 20000; to: 5 -0.10 5; 
+                           loop: true"
+      ></a-entity>
+     
+      <!--   灯光-->
+      <a-light color="red" position="0 20 0" intensity="2"></a-light>
+
+      <!-- Camera & Cursor -->
+      <a-entity
+        id="avbox"
+        movement-controls="speed:0.08;fly:true"
+        position="0 1 5"
+      >
+        <a-entity camera look-controls="pointerLockEnabled:false">
+          <a-cursor
+            id="cursor0"
+            event-set__mouseenter="_event: mouseenter; color: yellow; from: 1 1 1; to: 0.1 0.1 0.1; dur: 150"
+            event-set__mouseleave="_event: mouseleave; color: black;from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
+            raycaster="far:20;objects: .link,.clickable"
+          ></a-cursor>
+        </a-entity>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
+

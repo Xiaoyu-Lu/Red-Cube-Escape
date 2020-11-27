@@ -19,7 +19,7 @@
 
 ## Intro
 
-This game is based on A-Frame, because it can be ”developed from a plain HTML file without having to install anything“. 
+This sci-fi room escape game is based on A-Frame, because it can be ”developed from a plain HTML file without having to install anything“. 
 
 Aframe version: 1.0.4
 

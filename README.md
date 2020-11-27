@@ -25,7 +25,7 @@ Aframe version: 1.0.4
 
 Live Red-Cube-Escape Game: [Link](https://xiaoyu-lu.github.io/Red-Cube-Escape/escape-red.html)
 
-Tested on: Safari|Google Chrome|Safari Mobile | Chrome Mobile
+Tested on: Safari | Google Chrome | Safari Mobile | Chrome Mobile
 
 Developer:
 

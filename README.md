@@ -5,8 +5,8 @@
 ![image-welcome](imgs/willkommen.gif)
 
 * [Intro](#intro)
-  + [Installation](#installation)
-+ [Game Design](#game-design)
+* [Game Design](#game-design)
++ [Installation](#installation)
 * [Walk Through](#walk-through)
   + [1. Layout](#1-layout)
   + [2. Cursor & mouse](#2-cursor---mouse)
@@ -33,7 +33,11 @@ Developer:
 
 Date : 2020/11/26
 
-### Installation
+## Game Design
+
+<img src="imgs/game-design.png" alt="game-design" style="zoom:50%;" />
+
+## Installation
 
 - Download the code.
 
@@ -97,10 +101,6 @@ Date : 2020/11/26
   2. Assets. You might need to change the path of assets. For Glitch, you can upload assets, copy the URL, and use it in the code.
   
      <img src="imgs/aframe-asset.png" alt="image-aframe-asset" style="zoom:30%;" />
-
-## Game Design
-
-<img src="imgs/game-design.png" alt="game-design" style="zoom:50%;" />
 
 ## Walk Through
 

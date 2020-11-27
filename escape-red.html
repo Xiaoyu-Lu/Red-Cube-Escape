@@ -40,7 +40,8 @@
       });
     </script>
 
-    <!-- 点击blueCube改Moon的visibility用 -->
+
+    <!-- click the blueCub and change the visibility of the moon-->
     <script>
       AFRAME.registerComponent("button-moon", {
         init: function() {
@@ -52,13 +53,35 @@
       });
     </script>
 
-    <!-- 点击Moob改Portal的visibility用 -->
+    <!-- click the moon and change the visibility of the portal-->
     <script>
       AFRAME.registerComponent("moon", {
         init: function() {
           this.el.addEventListener("click", e => {
-            let obj = document.querySelector("#portal");
-            obj.setAttribute("visible", "true");
+            if (this.el.getAttribute("visible")) {
+              let obj = document.querySelector("#portal");
+              obj.setAttribute("visible", !obj.getAttribute("visible"));
+              obj.classList.add("clickable");
+            }
+          });
+        }
+      });
+    </script>
+
+    <!-- if the portal is visibe, assign the link-->
+    <script>
+      AFRAME.registerComponent("navigate-on-click", {
+        schema: {
+          url: { default: "" }
+        },
+        init: function() {
+          var data = this.data;
+          var el = this.el;
+
+          el.addEventListener("click", function() {
+            if (el.getAttribute("visible")) {
+              window.location.href = data.url;
+            }
           });
         }
       });
@@ -300,16 +323,18 @@
         visible="false"
       ></a-entity>
 
-      <!-- PORTAL //TO-DO:prevent triggering when hidden-->
-      <a-link
+      <!-- PORTAL prevent triggering when hidden-->
+      <a-entity
         id="portal"
-        href="escape-space.html"
-        title="SPACE"
-        position="-15 5 50"
-        rotation="0 0 0"
+        geometry="primitive: cylinder"
+        scale="1.5 0.2 1.5"
+        position="-8 5 20"
+        rotation="0 -135 90"
+        material="color: #space; opacity: 0.2; metalness: 0; roughness: 0"
         visible="false"
-        image="#space"
-      ></a-link>
+        navigate-on-click="url:escape-space.html"
+      >
+      </a-entity>
 
       <!-- 灯光 旋转球1 -->
       <a-entity

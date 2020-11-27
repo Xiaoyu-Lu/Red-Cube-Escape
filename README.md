@@ -19,7 +19,7 @@
 
 ## Intro
 
-This sci-fi room escape game is based on A-Frame, because it can be ”developed from a plain HTML file without having to install anything“. 
+This sci-fi room escape game is based on A-Frame, because it can be ”developed from a plain HTML file without having to install anything“.
 
 Aframe version: 1.0.4
 
@@ -73,7 +73,7 @@ Date : 2020/11/26
 
 - keep: assets & .html & link-controls.js
 
-- Remix on *Glitch* 
+- Remix on *Glitch*
 
   > [Glitch](https://glitch.com/~aframe) provides an online code editor with instant deployment and hosting of web sites. The editor supports both front-end and back-end code as well as multiple files and directories. Glitch lets us remix (i.e., copy) existing projects and make them our own and instantly host and deploy changes for everyone to see.
 
@@ -104,21 +104,21 @@ Date : 2020/11/26
 
    <img src="imgs/aframe-asset.png" alt="image-aframe-asset" style="zoom:30%;" />
 
-## Walk Through
+## Walk Through (version 0.0.0)
 
 ![image-start](imgs/start.png)
 
-The scene is inspired by a science-fiction horror movie called Cube. The mission of the player is to escape from the cube/room. 
+The scene is inspired by a science-fiction horror movie called Cube. The mission of the player is to escape from the cube/room.
 
 ### 1. Layout
 
-If you click the big cube in the middle, the room will go red for a second, and the cube rotates itself. With those floating cube,  two light entities in the room (i.e., two animated rotating spheres) provides a weird atmosphere to the scene. 
+If you click the big cube in the middle, the room will go red for a second, and the cube rotates itself. With those floating cube,  two light entities in the room (i.e., two animated rotating spheres) provides a weird atmosphere to the scene.
 
 <img src="imgs/bigCubeRotation.gif" style="zoom:53%;" />
 
 ### 2. Cursor & mouse
 
-If the object is clickable, the color of the cursor will change from black to yellow. 
+If the object is clickable, the color of the cursor will change from black to yellow.
 
 <img src="imgs/cursor-color-channge.gif" alt="cursor-color-channge" style="zoom:50%;" />
 
@@ -144,17 +144,17 @@ On the ocean, a yellow cylinder flows up and down. When your mouse hovers over i
 
 #### 3.2  Riddle Line2: Worship the Moonlight
 
-Let's find the mystery "under the ocean"! 
+Let's find the mystery "under the ocean"!
 
-While investigating those cubes,  you find a cube changed its color to blue with a "Night is coming" prompt. It must be something important. Click it. The sky suddenly becomes dark. 
+While investigating those cubes,  you find a cube changed its color to blue with a "Night is coming" prompt. It must be something important. Click it. The sky suddenly becomes dark.
 
 <img src="imgs/change-night-scene.gif" alt="change-night-scene" style="zoom:50%;" />
 
-You look around and see the moon swirling. You rush to it to see closer. It becomes larger when you mouse hovering above it. 
+You look around and see the moon swirling. You rush to it to see closer. It becomes larger when you mouse hovering above it.
 
 <img src="imgs/swirling-moob.gif" alt="swirling-moob" style="zoom:50%;" />
 
-There's no harm to click it, it won't explode. And a Portal with a text "Space" appears in the sky. 
+There's no harm to click it, it won't explode. And a Portal with a text "Space" appears in the sky.
 
 <img src="imgs/moon-click-portal.png" alt="image-moon-click-portal" style="zoom:30%;" />
 
@@ -166,17 +166,17 @@ Something is emitting out of the giant celestial object. An alien is approaching
 
 <img src="imgs/space-layout.gif" alt="space-layout" style="zoom:100%;" />
 
-Again, there's no harm to click the alien, it won't kill you. 
+Again, there's no harm to click the alien, it won't kill you.
 
 <img src="imgs/quote-prompt.png" alt="image-quote-prompt" style="zoom:50%;" />
 
 A revised quote of Oscar Wilde shows up in the middle of nowhere:
 
-*“Some of us are looking at the stars, but all of us are all in the gutter.”* 
+*“Some of us are looking at the stars, but all of us are all in the gutter.”*
 
 > " We are all in the gutter, but *some of us are looking at the stars*.” - Oscar Wilde
 
-Of course, this esoteric clue is not hard for you. 
+Of course, this esoteric clue is not hard for you.
 
 (Look up, nothing!)
 
@@ -186,8 +186,7 @@ Yes, you did it! Congrats!
 
 ## Bugs
 
-There're two identified bugs. 
+There're two identified bugs.
 
 1. <s>The ocean should be impenetrable.</s> (Solved by changing the *fly* in movement-controls to false)
-2. Some properties of the hidden object should be removed (e.g. the hidden portal shouldn't be functional).
-
+2. <s>Some properties of the hidden object should be removed (e.g. the hidden portal shouldn't be functional).</s> (Solved in version 0.0.1. Discard the <a-link>, create an entity with a customized url assign function that is aligned with the object's visibility)

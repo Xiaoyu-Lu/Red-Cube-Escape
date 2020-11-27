@@ -12,18 +12,39 @@
     <script src="libs/aframe-particle-system-component.min.js"></script>
     <script src="libs/link-controls.js"></script>
 
+    <!--     click the button, the text will show up along with the portal -->
     <script>
       AFRAME.registerComponent("button", {
         init: function() {
           this.el.addEventListener("click", e => {
             let obj = document.querySelector("#portal");
             let obj2 = document.querySelector("a-text");
-            obj.setAttribute("visible", "true");
-            obj2.setAttribute("visible", !obj2.getAttribute("visible"));
+            obj.setAttribute("visible", "true"); //portal
+            obj.classList.add('clickable') //portal
+            obj2.setAttribute("visible", !obj2.getAttribute("visible")); //text
           });
         }
       });
     </script>
+
+    <!-- if the portal is visibe, assign the link-->
+     <script>
+       AFRAME.registerComponent("navigate-on-click", {
+         schema: {
+           url: { default: "" }
+         },
+         init: function() {
+           var data = this.data;
+           var el = this.el;
+
+           el.addEventListener("click", function() {
+             if (el.getAttribute("visible")) {
+               window.location.href = data.url;
+             }
+           });
+         }
+       });
+     </script>
   </head>
 
   <body>
@@ -58,15 +79,17 @@
       ></a-entity>
 
       <!-- PORTAL -->
-      <a-link
+      <a-entity
         id="portal"
-        href="escape-red.html"
-        title="NEXT ROOM"
-        position=" 0 -20 5"
-        rotation="-90 0 0"
+        geometry="primitive: cylinder"
+        scale="1.5 0.2 1.5"
+        position="0 -20 5"
+        rotation="0 0 0"
+        navigate-on-click="url: part1-red-loewi.html"
+        material="color: black; opacity: 0.5; metalness: 0; roughness: 0"
         visible="false"
-        image="#space"
-      ></a-link>
+      >
+      </a-entity>
 
       <!-- text: “Some of us are looking at the stars, but all of us are living in the gutter.” -->
       <a-text

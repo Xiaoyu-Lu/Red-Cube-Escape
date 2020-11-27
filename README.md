@@ -6,6 +6,7 @@
 
 * [Intro](#intro)
   + [Installation](#installation)
++ [Game Design](#game-design)
 * [Walk Through](#walk-through)
   + [1. Layout](#1-layout)
   + [2. Cursor & mouse](#2-cursor---mouse)
@@ -97,6 +98,10 @@ Date : 2020/11/26
   
      <img src="imgs/aframe-asset.png" alt="image-aframe-asset" style="zoom:30%;" />
 
+## Game Design
+
+<img src="imgs/game-design.png" alt="game-design" style="zoom:50%;" />
+
 ## Walk Through
 
 ![image-start](imgs/start.png)
@@ -104,6 +109,10 @@ Date : 2020/11/26
 The scene is inspired by a science-fiction horror movie called Cube. The mission of the player is to escape from the cube/room. 
 
 ### 1. Layout
+
+
+
+
 
 If you click the big cube in the middle, the room will go red for a second, and the cube rotates itself. With those floating cube,  two light entities in the room (i.e., two animated rotating spheres) provides a weird atmosphere to the scene. 
 

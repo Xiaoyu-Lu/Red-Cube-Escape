@@ -17,9 +17,7 @@
 
 ## Intro
 
-This game is based on A-Frame, because it is easy to use. 
-
-> A-Fram can be developed from a plain HTML file without having to install anything. 
+This game is based on A-Frame, because it can be ”developed from a plain HTML file without having to install anything“. 
 
 Aframe version: 1.0.4
 

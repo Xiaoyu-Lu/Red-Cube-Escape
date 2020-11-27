@@ -2,7 +2,7 @@
 - **A-frame based Room Escape Game**
 - **Web VR Room Escape Game**
 
-![image-start](imgs/start.png)
+![image-welcome](imgs/willkommen.gif)
 
 * [Intro](#intro)
   + [Installation](#installation)
@@ -100,6 +100,8 @@ Date : 2020/11/26
      <img src="imgs/aframe-asset.png" alt="image-aframe-asset" style="zoom:30%;" />
 
 ## Walk Through
+
+![image-start](imgs/start.png)
 
 The scene is inspired by a science-fiction horror movie called Cube. The mission of the player is to escape from the cube/room. 
 

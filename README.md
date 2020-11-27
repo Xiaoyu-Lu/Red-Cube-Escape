@@ -189,4 +189,5 @@ Yes, you did it! Congrats!
 There're two identified bugs.
 
 1. <s>The ocean should be impenetrable.</s> (Solved by changing the *fly* in movement-controls to false)
-2. <s>Some properties of the hidden object should be removed (e.g. the hidden portal shouldn't be functional).</s> (Solved in version 0.0.1. Discard the <a-link>, create an entity with a customized url assign function that is aligned with the object's visibility)
+2. <s>Some properties of the hidden object should be removed (e.g. the hidden portal shouldn't be functional).</s> (Solved in version 0.0.1. Instead of using \<a-link\> to create a portal, I use an entity with a customized URL-assign function that is aligned with the object's visibility.)
+

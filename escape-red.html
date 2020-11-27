@@ -258,11 +258,11 @@
         button
         class="clickable"
         id="yellowCylinder"
-        position="5 -0.25 7"
+        position="2 -0.25 7"
         radius="0.5"
         height="0.5"
         color="#FFC65D"
-        animation="property: position; easing: easeInOutQuad; dir: alternate; dur: 1000; to: 5 -0.5 7; loop: true"
+        animation="property: position; easing: easeInOutQuad; dir: alternate; dur: 1000; to: 2 -0.5 7; loop: true"
         event-set__enter="_event: mouseenter; _target: #buttonText; visible: true"
         event-set__leave="_event: mouseleave; _target: #buttonText; visible: false"
       >
@@ -340,8 +340,8 @@
       <!-- Camera & Cursor -->
       <a-entity
         id="avbox"
-        movement-controls="speed:0.08;fly:true"
-        position="5 2 20"
+        movement-controls="speed:0.08; fly:false"
+        position="5 1.6 20"
       >
         <a-entity camera look-controls="pointerLockEnabled:false">
           <a-cursor

@@ -29,10 +29,9 @@ Tested on: Safari|Google Chrome|Safari Mobile | Chrome Mobile
 
 Developer:
 
-```
-|[<img src="imgs/xiaoyu" width="100px;"/><br/><sub>Xiaoyu Lu](https://github.com/Xiaoyu-Lu)<br/>|
-| :---: |
-```
+| <img src="imgs/xiaoyu.JPG" width="100px;"/><br/>[Xiaoyu Lu](https://github.com/Xiaoyu-Lu) |
+| ------------------------------------------------------------ |
+|                                                              |
 
 Date : 2020/11/26
 

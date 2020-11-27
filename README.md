@@ -4,6 +4,17 @@
 
 ![image-start](imgs/start.png)
 
+* [Intro](#intro)
+  + [Installation](#installation)
+* [Walk Through](#walk-through)
+  + [1. Layout](#1-layout)
+  + [2. Cursor & mouse](#2-cursor---mouse)
+  + [3. Riddle](#3-riddle)
+    - [3.1 Riddle Line1: Under the Ocean](#31-riddle-line1--under-the-ocean)
+    - [3.2  Riddle Line2: Worship the Moonlight](#32--riddle-line2--worship-the-moonlight)
+    - [3.3  Riddle Line3: Fight in the Space](#33--riddle-line3--fight-in-the-space)
+* [Bugs](#bugs)
+
 ## Intro
 
 This game is based on A-Frame, because it is easy to use. 
@@ -18,7 +29,10 @@ Tested on: Safari|Google Chrome|Safari Mobile | Chrome Mobile
 
 Developer:
 
-
+```
+|[<img src="imgs/xiaoyu" width="100px;"/><br/><sub>Xiaoyu Lu](https://github.com/Xiaoyu-Lu)<br/>|
+| :---: |
+```
 
 Date : 2020/11/26
 
@@ -151,13 +165,15 @@ Again, there's no harm to click the alien, it won't kill you.
 
 <img src="imgs/quote-prompt.png" alt="image-quote-prompt" style="zoom:50%;" />
 
-A quote of  Oscar Wilde shows up in the middle of nowhere:
+A revised quote of Oscar Wilde shows up in the middle of nowhere:
 
-​						 “We are all in the gutter, but *some of us are looking at the stars*.” 
+*“Some of us are looking at the stars, but all of us are all in the gutter.”* 
+
+> " We are all in the gutter, but *some of us are looking at the stars*.” - Oscar Wilde
 
 Of course, this esoteric clue is not hard for you. 
 
-Look up, nothing!
+(Look up, nothing!)
 
 Look down, a Portal to another room!
 
@@ -168,5 +184,5 @@ Yes, you did it! Congrats!
 There're two identified bugs. 
 
 1. The ocean should be impenetrable.
-2. The hidden object should not be clickable (e.g. the hidden portal shouldn't be functional).
+2. Some properties of the hidden object should be removed (e.g. the hidden portal shouldn't be functional).
 

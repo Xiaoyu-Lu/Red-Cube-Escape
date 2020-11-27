@@ -5,7 +5,8 @@
 ![image-welcome](imgs/willkommen.gif)
 
 * [Intro](#intro)
-* [Game Design](#game-design)
+
++ [Game Design](#game-design)
 + [Installation](#installation)
 * [Walk Through](#walk-through)
   + [1. Layout](#1-layout)

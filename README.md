@@ -54,6 +54,8 @@ Date : 2020/11/26
 
 - Online editor:
 
+  - keep: assets & .html & link-controls.js
+
   - Remix on *Glitch* 
 
     > [Glitch](https://glitch.com/~aframe) provides an online code editor with instant deployment and hosting of web sites. The editor supports both front-end and back-end code as well as multiple files and directories. Glitch lets us remix (i.e., copy) existing projects and make them our own and instantly host and deploy changes for everyone to see.
@@ -62,12 +64,12 @@ Date : 2020/11/26
 
     > [CodePen — A-Frame](https://codepen.io/mozvr/pen/BjygdO)
 
-  ##### N.B.: If you choose to remix on the online code editors, you have to change some paths.
+  ##### N.B.: If you choose to remix on the online code editors, you might have to change some paths.
 
   1. Scripts. e.g. from `<script src="libs/aframe.min.js"></script>` to `<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>`
 
-     Below are the scripts (version included) you might have to change:
-
+     Below are the scripts (version included) you might have to change to:
+  
      ```html
       <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
       <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>

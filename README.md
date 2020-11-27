@@ -5,9 +5,9 @@
 ![image-welcome](imgs/willkommen.gif)
 
 * [Intro](#intro)
-
-+ [Game Design](#game-design)
-+ [Installation](#installation)
+* [Game Design](#game-design)
+* [Installation](#installation)
+    - [Online editor](#online-editor)
 * [Walk Through](#walk-through)
   + [1. Layout](#1-layout)
   + [2. Cursor & mouse](#2-cursor---mouse)
@@ -68,40 +68,41 @@ Date : 2020/11/26
       └── link-controls.js
   ```
 
-- Online editor:
 
-  - keep: assets & .html & link-controls.js
+#### Online editor
 
-  - Remix on *Glitch* 
+- keep: assets & .html & link-controls.js
 
-    > [Glitch](https://glitch.com/~aframe) provides an online code editor with instant deployment and hosting of web sites. The editor supports both front-end and back-end code as well as multiple files and directories. Glitch lets us remix (i.e., copy) existing projects and make them our own and instantly host and deploy changes for everyone to see.
+- Remix on *Glitch* 
 
-  - Remix on CodePen
+  > [Glitch](https://glitch.com/~aframe) provides an online code editor with instant deployment and hosting of web sites. The editor supports both front-end and back-end code as well as multiple files and directories. Glitch lets us remix (i.e., copy) existing projects and make them our own and instantly host and deploy changes for everyone to see.
 
-    > [CodePen — A-Frame](https://codepen.io/mozvr/pen/BjygdO)
+- Remix on CodePen
 
-  ##### N.B.: If you choose to remix on the online code editors, you might have to change some paths.
+  > [CodePen — A-Frame](https://codepen.io/mozvr/pen/BjygdO)
 
-  1. Scripts. e.g. from `<script src="libs/aframe.min.js"></script>` to `<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>`
+**N.B.: If you choose to remix on the online code editors, you might have to change some paths.**
 
-     Below are the scripts (version included) you might have to change to:
-  
-     ```html
-      <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
-      <script src="https://unpkg.com/aframe-physics-system@1.4.0/dist/aframe-physics-system.min.js"></script>
-      <script src="https://unpkg.com/aframe-animation-component@3.2.5/dist/aframe-animation-component.min.js"></script>
-      <script src="https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.min.js"></script>
-      <script src="https://unpkg.com/aframe-event-set-component@5/dist/aframe-event-set-component.min.js"></script>
-      <script src="https://unpkg.com/aframe-template-component@3.2.1/dist/aframe-template-component.min.js"></script>
-      <script src="https://unpkg.com/aframe-proxy-event-component@2.1.0/dist/aframe-proxy-event-component.min.js"></script>
-      <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
-      <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
-     ```
-  
-  2. Assets. You might need to change the path of assets. For Glitch, you can upload assets, copy the URL, and use it in the code.
-  
-     <img src="imgs/aframe-asset.png" alt="image-aframe-asset" style="zoom:30%;" />
+1. Scripts. e.g. from `<script src="libs/aframe.min.js"></script>` to `<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>`
+
+   Below are the scripts (version included) you might have to change to:
+
+   ```html
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-physics-system@1.4.0/dist/aframe-physics-system.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@3.2.5/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@5/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-template-component@3.2.1/dist/aframe-template-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-proxy-event-component@2.1.0/dist/aframe-proxy-event-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+   ```
+
+2. Assets. You might need to change the path of assets. For Glitch, you can upload assets, copy the URL, and use it in the code.
+
+   <img src="imgs/aframe-asset.png" alt="image-aframe-asset" style="zoom:30%;" />
 
 ## Walk Through
 
@@ -110,10 +111,6 @@ Date : 2020/11/26
 The scene is inspired by a science-fiction horror movie called Cube. The mission of the player is to escape from the cube/room. 
 
 ### 1. Layout
-
-
-
-
 
 If you click the big cube in the middle, the room will go red for a second, and the cube rotates itself. With those floating cube,  two light entities in the room (i.e., two animated rotating spheres) provides a weird atmosphere to the scene. 
 

@@ -4,18 +4,18 @@
 
 ![image-welcome](imgs/willkommen.gif)
 
-* [Intro](#intro)
-* [Game Design](#game-design)
-* [Installation](#installation)
-    - [Online editor](#online-editor)
-* [Walk Through](#walk-through)
-  + [1. Layout](#1-layout)
-  + [2. Cursor & mouse](#2-cursor---mouse)
-  + [3. Riddle](#3-riddle)
-    - [3.1 Riddle Line1: Under the Ocean](#31-riddle-line1--under-the-ocean)
-    - [3.2  Riddle Line2: Worship the Moonlight](#32--riddle-line2--worship-the-moonlight)
-    - [3.3  Riddle Line3: Fight in the Space](#33--riddle-line3--fight-in-the-space)
-* [Bugs](#bugs)
+- [Intro](#intro)
+- [Game Design](#game-design)
+- [Installation](#installation)
+    + [Online editor](#online-editor)
+- [Walk Through (version 0.0.0)](#walk-through--version-000-)
+  * [1. Layout](#1-layout)
+  * [2. Cursor & mouse](#2-cursor---mouse)
+  * [3. Riddle](#3-riddle)
+    + [3.1 Riddle Line1: Under the Ocean](#31-riddle-line1--under-the-ocean)
+    + [3.2  Riddle Line2: Worship the Moonlight](#32--riddle-line2--worship-the-moonlight)
+    + [3.3  Riddle Line3: Fight in the Space](#33--riddle-line3--fight-in-the-space)
+- [Bugs](#bugs)
 
 ## Intro
 

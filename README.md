@@ -112,7 +112,7 @@ The scene is inspired by a science-fiction horror movie called Cube. The mission
 
 ### 1. Layout
 
-If you click the big cube in the middle, the room will go red for a second, and the cube rotates itself. With those floating cube,  two light entities in the room (i.e., two animated rotating spheres) provides a weird atmosphere to the scene.
+If you click the big cube in the middle, the room will go red for a second, and the cube rotates itself.  Looking around, two giant red rotating spheres and those floating cubes provide a weird atmosphere to the scene. You need to get out of the room!
 
 <img src="imgs/bigCubeRotation.gif" style="zoom:53%;" />
 

@@ -10,7 +10,7 @@
     <script src="libs/aframe-physics-system.min.js"></script>
     <script src="libs/aframe-animation-component.min.js"></script>
     <script src="libs/aframe-particle-system-component.min.js"></script>
-    <script src="libs/link-controls.js"></script>
+    <script src="libs/aframe-text-geometry-component.min.js"></script>
 
     <!--     click the button, the text will show up along with the portal -->
     <script>
@@ -71,7 +71,7 @@
       <!-- 初始背景 360-degree space panorama -->
       <a-sky id="image-360" radius="200" src="#space" rotation="0 0 0"></a-sky>
 
-      <!-- 喷射物 红色-->
+      <!-- Ejecta red-->
       <a-entity
         id="shooting1"
         position="-50 2.25 -50"
@@ -82,7 +82,7 @@
       <a-entity
         id="portal"
         geometry="primitive: cylinder"
-        scale="1.5 0.2 1.5"
+        scale="10 0.2 10"
         position="0 -20 5"
         rotation="0 0 0"
         navigate-on-click="url: escape-red.html"
@@ -91,29 +91,37 @@
       >
       </a-entity>
 
+      <!-- text: "Go! Find your way home!" -->
+      <a-entity
+        position="-5.5 2 -7"
+        text-geometry="value: Go! Find your way home!; bevelEnabled: true; bevelSize: 0.05; bevelThickness: 0.05; curveSegments: 12; size: 0.8; height: 0;"
+        material="color:#BBB; metalness:0.1; roughness: 1; "
+      ></a-entity>
+
       <!-- text: “Some of us are looking at the stars, but all of us are living in the gutter.” -->
       <a-text
         value="Some of us are looking at the stars,\nbut all of us are living in the gutter."
         color="#BBB"
-        position="-0.9 0.2 -3"
-        scale="5 5 5"
+        position="-6 0.2 -3"
+        scale="3 3 3"
         visible="false"
+        animation="property: position; easing: easeInOutQuad; dir: alternate; dur: 1000; to: -6 0 -3; loop: true"
       ></a-text>
 
-      <!-- import gltf figure created by blender -->
+      <!-- import gltf figure created by blender & blue light inside -->
       <a-entity
         button
         class="clickable"
         gltf-model="#figure"
         animation-mixer="clip: walking.001"
-        position="-3 10 -15"
+        position="-3 9 -13"
         rotation="0 20 0"
-        light="type: point; intensity: 5"
+        light="type: point; color: #000080; intensity: 5"
         animation="property: position;
                            easing: easeInOutQuad;
                            dir: alternate;
 
-                           dur: 20000; to: 5 -0.10 5;
+                           dur: 25000; to: 5 -0.10 5;
                            loop: true"
       ></a-entity>
 
